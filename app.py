@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.ticker import StrMethodFormatter
 
 from pycaret.regression import *
 
@@ -30,8 +32,13 @@ def get_user_input():
   return data
 
 
-def visualize_output(prediction):
-  pass
+def visualize_output(prediction_proba):
+  """
+    this function uses matplotlib to create inference bar chart rendered with streamlit in real-time 
+    return type : matplotlib bar chart  
+  """
+  st.write(prediction_proba)
+  
 
 
 # Title of the web app
