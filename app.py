@@ -42,6 +42,8 @@ def visualize_output(prediction_proba):
 # Title of the web app
 st.title("Incident Management SLA predictor")
 
+st.write("This web app predicts the probablity of meeting SLA given the following input parameters")
+
 user_input = get_user_input()
 user_input_processed = user_input_processed(user_input)
 
